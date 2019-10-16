@@ -1,6 +1,6 @@
 # H. G. Wells, *The Time Machine*
 
-_Bibliography:_
+__Bibliography:__
 
 Title: The Time Machine
 Author: H. G. Wells
