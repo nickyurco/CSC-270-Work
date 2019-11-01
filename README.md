@@ -11,6 +11,7 @@ Character set encoding: UTF-8
 
 
 __Character Validation__
+
 The text has been machine validated as to character-set using a Scala script. The following is a complete inventory of the characters present in this text:
 
 | Character | Character | Character | Character | Character |
