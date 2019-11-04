@@ -30,4 +30,3 @@ The text has been machine validated as to character-set using a Scala script. Th
 | `r` (72) | `s` (73) | `t` (74) | `u` (75) | `v` (76) |
 | `w` (77) | `x` (78) | `y` (79) | `z` (7a) | `ç` (e7) |
 | `ü` (fc) | `‘` (2018) | `’` (2019) | `“` (201c) | `”` (201d) |
-| `…` (2026) |
