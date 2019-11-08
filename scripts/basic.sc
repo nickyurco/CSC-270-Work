@@ -4,11 +4,13 @@
 :load utilities.sc
 
 
-val lib: CiteLibrary = loadLibrary("text/arist_politics.cex")
+val lib: CiteLibrary = loadLibrary("text/TimeMachine.cex")
 
 val tr: TextRepository = lib.textRepository.get
 
 val corp: Corpus = tr.corpus
+//corp.nodes(0).urn
+//corp.nodes(0).text
 
 // How to turn a Corpus into One Big String
 val oneBigString: String = corp.nodes.map( _.text ).mkString(" ")
@@ -21,4 +23,3 @@ val tokens: Vector[String] = oneBigString.split(punctuation).toVector
 // How to get rid of empty tokens
 
 val noEmpties: Vector[String] = tokens.filter( _.size > 0 )
-
