@@ -10,11 +10,15 @@ Language: English
 Character set encoding: UTF-8
 
 __The Text:__
+*The Time Machine* is a classic novel of the sci-fi genre about a Time Traveller who travels far forward in time to gain a glimpse into Earth's distant future and recount the stories of his travels to a group of dinner guests. I chose to analyze this texts because it is one of the earliest examples of the sci-fi genre entering the realm of popular culture. 
+
 `text/TimeMachine.cex`is where you can find the citable edition of the text, which has been built to the standards of CITE architecture. It has been created to enable seemless machine processing of the text. 
 
 A human-readable HTML site has also been created, its pages can be found in `html/pages/`. Begin with `index.html` which acts as a table of contents. The script that builds a set of pages from a `.cex` file can be found `CSC-270-Work/src/main/scala/web-writer.scala` . A link back to this repository is included in `index.html`
 
 all scripts can be run using the sbt console interface in a unix terminal. 
+
+Everything in this repository is public domain and free to use by anyone. 
 
 __Character Validation__
 
@@ -48,3 +52,16 @@ The spell check script is found at `scripts/corpus-spelling.sc`
 loading these scripts in the sbt console shows that no "bad words" (words not found in either dictionary) appear in the text. The purpose of the user dictionary is to hold all words that weren't found in the standard dictionary that I deemed to be correct words in the book. These words include names, words made up by Wells, words with a British English, or French spelling, and words that didn't appear in the dictionary with their punctuation removed (ex. Im, the contraction of I am). 
 
 The spell check helped me to identify an instance of the string "-ED" which is used to indicate the end of a footnote. I was able to remove this in order to ensure a proper representation of Wells text. 
+
+__N Gram Analysis__ 
+
+An NGram is a recurring pattern of N-number of words. This repository includes a basic Scala script showing how NGram analysis can work with, and be enhanced by, the CITE Architecture. The script can be found at `scripts/ngrams2.sc`
+
+Loading this script in the sbt console gives the user access to the `ngrams()` funciton. This allows the user to input any number (n) as the single parameter and the function will return a histogram of the most occuring n-grams for that input and how many times each occurs. For example, `ngrams(3)` will return a histogram of the texts 3-grams. In order to clear up clutter, this script ignores any ngram that occurs less than 5 times in the text. 
+
+As was to be expected, the most used 3-grams in the text were, "the Time Machine" which occurs 29 times and "the Time traveller" which occurs 53 times. Which leads to the conclusion that, despite the texts name, this story is more about the man than the machine.
+
+Another interesting observation is that, when looking at 1-grams (basically just a list of word frequencies) I found that the word "I" occurs the second most of all words (1241). Looking into it, I realized that this is because the text is wrritten from the first-person point of view and that the narrator (a dinner guest of the Time Traveller) spends a lot of time reflecting on himself and his role in the story. It is not just about the Time Traveller and his machine. 
+
+last updated: 12/13/2019
+
