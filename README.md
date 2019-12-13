@@ -9,6 +9,8 @@ Last Updated: January 14, 2018
 Language: English
 Character set encoding: UTF-8
 
+__.cex file:__
+TimeMachine.cex, the cleaned up file, built in a corpus:node format, for operations to be run on can be found in the text folder.
 
 __Character Validation__
 
