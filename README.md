@@ -38,3 +38,13 @@ The text has been machine validated as to character-set using a Scala script. Th
 | `ü` (fc) | `‘` (2018) | `’` (2019) | `“` (201c) | `”` (201d) |
 
 This script is useful because it allows a user to easily identify and change character anomalies in the text and adjust ambiguous characters. Any further operations on the full text without character validation would yield innacturate results. 
+
+__Spell Check__
+
+My version of *The Time Machine* has been spell checked against two dicitonaries. One is a standard English word-list generated from the SCOWL online tool. The second is a user-dictionary. These two dictionaries can be found at `validation-data/standard-dictionary.txt` and `validation-data/user-dictionary.txt` respectively. 
+
+The spell check script is found at `scripts/corpus-spelling.sc`
+
+loading these scripts in the sbt console shows that no "bad words" (words not found in either dictionary) appear in the text. The purpose of the user dictionary is to hold all words that weren't found in the standard dictionary that I deemed to be correct words in the book. These words include names, words made up by Wells, words with a British English, or French spelling, and words that didn't appear in the dictionary with their punctuation removed (ex. Im, the contraction of I am). 
+
+The spell check helped me to identify an instance of the string "-ED" which is used to indicate the end of a footnote. I was able to remove this in order to ensure a proper representation of Wells text. 
