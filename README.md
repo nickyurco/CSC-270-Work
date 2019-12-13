@@ -64,4 +64,5 @@ As was to be expected, the most used 3-grams in the text were, "the Time Machine
 Another interesting observation is that, when looking at 1-grams (basically just a list of word frequencies) I found that the word "I" occurs the second most of all words (1241). Looking into it, I realized that this is because the text is wrritten from the first-person point of view and that the narrator (a dinner guest of the Time Traveller) spends a lot of time reflecting on himself and his role in the story. It is not just about the Time Traveller and his machine. 
 
 last updated: 12/13/2019
+Contributors: Christopher Blackwell
 
