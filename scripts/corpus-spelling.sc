@@ -1,5 +1,5 @@
 
-:load scripts/corpus-tokenize.sc
+:load scripts/attic/corpus-tokenize.sc
 
 
 val spellCheckSplitters: String =  """[()\[\]·⸁.,; "?·!–—⸂⸃-]"""
