@@ -8,7 +8,7 @@ import java.util.Calendar
 
 :load utilities.sc
 
-val lib: CiteLibrary = loadLibrary("text/arist_politics.cex")
+val lib: CiteLibrary = loadLibrary("text/TimeMachine.cex")
 
 val tr: TextRepository = lib.textRepository.get
 
@@ -194,9 +194,9 @@ def takePercent( histo: Vector[(String, Int)], targetPercent: Int): Vector[(Stri
 
 //val anExcellentCitizen: Set[CtsUrn] = urnsForNGram("an excellent citizen", ngt)
 
-def ngrams( n: Int, filter: Int = 5, corpus: Corpus = noPuncCorpus): Vector[(String,Int)] = {
-	val ngt = makeNGramTuples(n, c)
-	val ngh = makeNGramHisto(ngt, f)
+def ngrams( n: Int= 3, filter: Int = 5, corpus: Corpus = noPuncCorpus): Vector[(String,Int)] = {
+	val ngt = makeNGramTuples(n, corpus)
+	val ngh = makeNGramHisto(ngt, filter)
 	showMe(ngh.reverse)
 	ngh
 }
